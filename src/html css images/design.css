@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", "InterS", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+/*section hero*/
+.heroImage {
+  width: 100%;
+}
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+.sectionHero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+.grid :last-child {
+  margin-bottom: 0;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--center-v {
+  align-items: center;
+}
+.headingPrimary,
+.headingSecondary,
+.headingTertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.headingPrimary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.headingSecondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.headingTertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.heroDescription {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-bottom: 4.8rem;
+}
+.button:link,
+.button:visited {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+.button--One:link,
+.button--One:visited {
+  background-color: #e67e22;
+  color: #fff;
+  margin-right: 1.6rem;
+}
+.button--One:link:hover,
+.button--One:active {
+  background-color: #cf711f;
+}
+.button--Two:link,
+.button--Two:visited {
+  background-color: #fff;
+  color: #555;
+}
+.button--Two:hover,
+.button--Two:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px white;
+}
+.heroImage {
+  width: 100%;
+}
+.deliveredMeals {
+  display: flex;
+  margin-top: 8rem;
+}
+.deliveredImages {
+  display: flex;
+}
+.deliveredImages img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+}
+.deliveredText {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.sectionSponsors {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.logos {
+  display: flex;
+  justify-content: space-between;
+}
+.logos img {
+  height: 4rem;
+  filter: grayscale(100);
+  opacity: 50%;
+}
+.headingSponsors {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  margin-top: 2.4rem;
+  color: #999;
+}
+.sectionHow {
+  padding: 9.6rem 0;
+}
+.stepNumber {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+.stepImage {
+  width: 35%;
+  z-index: 10;
+}
+.stepImageBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepImageBox::before,
+.stepImage::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stepImageBox::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+.stepImageBox::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #f8d8bd;
+  z-index: -1;
+}
+.stepDescription {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+/*Section meals*/
+.sectionMeals {
+  padding: 9.6rem 0;
+}
+.mealTitle {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+.mealAttributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.mealAttribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.75);
+  border-radius: 11px;
+  padding: 4.8rem;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem 0 rgba(0, 0, 0, 0.6);
+}
+.meal--one {
+  margin-right: 2.4rem;
+}
+.meal--two {
+  margin-right: 3.2rem;
+}
+.mealContent {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+.mealTags {
+  margin-bottom: 1.2rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 8px;
+  color: #333;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--vegan {
+  background-color: #94d82d;
+}
+.tag--paleo {
+  background-color: #ffd43b;
+}
+.mealIcon {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-right: 1rem;
+}
+.mealImage {
+  width: 100%;
+}
+.strong {
+  font-weight: 500;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 3rem;
+}
+.listItem {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.listIcon {
+  width: 3rem;
+  height: 3rem;
+}
+.check {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.center--text,
+.list {
+  text-align: center;
+}
+/*Section testimonials*/
+.sectionTestimonials {
+  background-color: #fdf2ed;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+.testimonialsContainer {
+  padding: 9.6rem;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.testimonialsImage {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.testimonialsText {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+.testimonialsName {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+.galleryImage {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+.galleryItem {
+  overflow: hidden;
+}
+.galleryImage:hover {
+  transform: scale(1.1);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+/*section pricing*/
+.sectionPricing {
+  padding: 9.6rem 0;
+}
+.pricingPlan {
+  border-radius: 11px;
+  width: 75%;
+}
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+.pricing-plan--starter,
+.pricing-plan--complete {
+  margin-right: 2rem;
+}
+.pricing-plan--complete {
+  background-color: #fdf2ed;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-plan--complete::after {
+  content: "Best value";
+  text-transform: uppercase;
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+.planHeader {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.planName {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  margin-bottom: 3.2rem;
+}
+.planPrice {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.planText {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+.planPrice span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+.planSignUp {
+  text-align: center;
+  align-items: center;
+  margin-top: 4.8rem;
+}
+.b--margin {
+  margin-top: 4.2rem;
+}
+.planDetails {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+.featureIcon {
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+.featureTitle {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.featureText {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.feature {
+  padding-right: 1rem;
+}
+/*Section forms*/
+.sectionForms {
+  padding: 9.6rem 0;
+}
+footer {
+  background-color: #fdf2e9;
+  text-align: center;
+  padding: 4.8rem;
+  height: 100%;
+  width: 100%;
+}
+.footerText {
+  font-size: 4.2rem;
+  font-weight: 600;
+}
+.footerTextTwo {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+.footer--svg {
+  margin: 1rem;
+  filter: grayscale(100);
+  opacity: 50%;
+  margin-bottom: 3rem;
+}
+.contactUsLink {
+  text-align: center;
+  filter: grayscale(100);
+  font-size: 2.4rem;
+  line-height: 2.4;
+  font-weight: 500;
+  padding-top: 2.4rem;
+}
+
+
+/*media queries*/
+@media all and (max-width: 1350px) {
+  .hero {
+    max-width: 12rem;
+  }
+  .headingPrimary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+  .grid {
+    column-gap: 4.8rem;
+  }
+  .headingSecondary {
+    font-size: 3.6rem;
+  }
+  .headingTertiary {
+    font-size: 2.4rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+  .testimonialsContainer {
+    padding: 9.6rem 3.2rem;
+  }
+}
+@media all and (max-width: 950px) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 3.2rem;
+    gap: 6.4rem;
+  }
+  .heroTextBox {
+    text-align: center;
+  }
+  .heroImage {
+    width: 60%;
+  }
+  .logosImage {
+    height: 2.4rem;
+  }
+  .stepNumber {
+    font-size: 7.4rem;
+  }
+  .mealContainer {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .sectionTestimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media all and (max-width: 700px) {
+  .grid--3-cols,
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diets {
+    grid-column: 1/ -1;
+    justify-content: center;
+  }
+  .headingSecondary {
+    margin-bottom: 4.8rem;
+  }
+  .pricingPlan {
+    width: 100%;
+  }
+}
+@media all and (max-width: 550px) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .sectionHero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+  .button,
+  .button:link,
+  .button:visited {
+    padding: 2.4rem 1.6rem;
+  }
+  .heroImage {
+    width: 88%;
+  }
+  .logosImage {
+    height: 1.2rem;
+  }
+  .stepImageBox:nth-child(2) {
+    grid-row: 1;
+  }
+  .stepImageBox:nth-child(6) {
+    grid-row: 5;
+  }
+  .stepImageBox {
+    transform: translateY(2.4rem);
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+}
